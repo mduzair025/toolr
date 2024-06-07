@@ -31,6 +31,10 @@ def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
+@app.route('/')
+def hello():
+    return 'Hello, World!'
+
 @app.route('/convert', methods=['POST'])
 def convert_images():
     ensure_directory()
@@ -54,3 +58,4 @@ def convert_images():
 
 if __name__ == '__main__':
     app.run(debug=True)
+

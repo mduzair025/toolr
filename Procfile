@@ -1,1 +1,1 @@
-worker: python md.py
+web: gunicorn md.py
