@@ -1,1 +1,1 @@
-web: gunicorn md.py
+web: gunicorn md:app
